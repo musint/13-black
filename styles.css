@@ -182,6 +182,7 @@ a.event:focus-visible { outline: 3px solid var(--dusty); outline-offset: 3px; }
   padding: 6px 14px;
   border-radius: 999px;
   margin-top: 10px;
+  margin-right: 8px;
 }
 
 .footer {
