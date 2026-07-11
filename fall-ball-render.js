@@ -6,6 +6,7 @@
   }
 
   function renderTimeline(container, noteEl, phases, weeks, status) {
+    if (!container || !noteEl) return;
     container.innerHTML = '';
     phases.forEach(function (phase) {
       var isActive = status.state === 'during' &&
@@ -37,6 +38,7 @@
   }
 
   function renderWeekList(container, weeks, finale, status) {
+    if (!container) return;
     container.innerHTML = '';
     weeks.forEach(function (week, i) {
       var card = document.createElement('div');

@@ -306,6 +306,15 @@ table.arc tr:last-child td { border-bottom: none; }
 .week-card p { margin-top: 8px; font-size: 15px; color: var(--body-ink); }
 .week-card p strong { color: var(--navy); }
 
+/* Practice-night sub-headings (fall ball page) */
+.night-heading {
+  margin-top: 24px;
+  margin-bottom: 4px;
+  font-size: 17px;
+  font-weight: 900;
+  color: var(--navy);
+}
+
 @media (max-width: 480px) {
   .timeline { flex-direction: column; }
   .timeline .pin { position: static; display: inline-block; margin-top: 8px; transform: none; }
