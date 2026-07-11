@@ -310,4 +310,5 @@ table.arc tr:last-child td { border-bottom: none; }
   .timeline { flex-direction: column; }
   .timeline .pin { position: static; display: inline-block; margin-top: 8px; transform: none; }
   .week-card .week-phase { margin-left: 0; }
+  table.arc { display: block; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; }
 }
