@@ -248,3 +248,66 @@ table.arc th {
   background: var(--chip);
 }
 table.arc tr:last-child td { border-bottom: none; }
+
+/* Phase timeline (fall ball page) */
+.timeline {
+  margin-top: 18px;
+  display: flex;
+  gap: 6px;
+}
+.timeline .phase {
+  flex: 1;
+  background: var(--card);
+  border-radius: 12px;
+  padding: 14px 10px 18px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(31, 42, 68, 0.06);
+  position: relative;
+}
+.timeline .phase.active { background: var(--navy); color: #fff; }
+.timeline .phase.active .phase-weeks { color: #cfd7e6; }
+.timeline .phase-name { font-weight: 800; font-size: 14px; }
+.timeline .phase-weeks { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.timeline .pin {
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--dusty);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.timeline-note {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Week-by-week schedule (fall ball page) */
+.week-list { margin-top: 18px; }
+.week-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: 0 6px 20px rgba(31, 42, 68, 0.06);
+  margin-bottom: 14px;
+}
+.week-card.current { outline: 2.5px solid var(--dusty); }
+.week-card.past { opacity: 0.55; }
+.week-card .week-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.week-card h3 { font-size: 18px; font-weight: 900; }
+.week-card .week-dates { font-size: 13px; color: var(--muted); }
+.week-card .week-phase { margin-left: auto; }
+.week-card p { margin-top: 8px; font-size: 15px; color: var(--body-ink); }
+.week-card p strong { color: var(--navy); }
+
+@media (max-width: 480px) {
+  .timeline { flex-direction: column; }
+  .timeline .pin { position: static; display: inline-block; margin-top: 8px; transform: none; }
+  .week-card .week-phase { margin-left: 0; }
+}
